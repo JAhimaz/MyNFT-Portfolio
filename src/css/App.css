@@ -5,16 +5,15 @@
 }
 
 .App-header {
-  background-color: #282759;
+  background-color: rgb(40, 39, 89);
   background-image: url("../assets/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
   display: flex;
-  /* flex-direction: column;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; */
   font-family: 'Thasadith', sans-serif;
   color: #F1E9F4;
 }
