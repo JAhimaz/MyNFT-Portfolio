@@ -4,13 +4,13 @@ import useContentType from "./useContentType/useContentType";
 
 const Fetch = new FetcherURLs();
 
-export const useNFTAssets = (metadataUrl : string) => {
+export const useNFTAssets = (metadataUrl : string, sn : string) => {
     const { data, error } = useSWR(metadataUrl, Fetch.fetcher);
 
     if (data) {
         return {
             loading: false,
-            nft: extractNFTData(data), // Define Type
+            nft: extractNFTData(data, sn), // Define Type
             error
         }
     }
@@ -22,7 +22,7 @@ export const useNFTAssets = (metadataUrl : string) => {
     }
 }
 
-const extractNFTData = (data : any) => {
+const extractNFTData = (data : any, sn : string) => {
     
     // const {
     //     contentCategory,
@@ -32,6 +32,8 @@ const extractNFTData = (data : any) => {
         name: data?.name,
         description: data?.description,
         properties: data?.properties,
+        mediaUri: Fetch.toWeb2Url(data?.mediaUri),
+        serial: sn,
         // contentType: contentCategory,
         thumb: data?.thumbnailUri
     }

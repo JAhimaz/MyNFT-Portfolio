@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { NFTPreview } from '../libs/nfts/NFTPreview';
+import { NFTCard } from '../libs/nfts/NFTCard/NFTCard';
 import { useAccounts } from '../libs/nfts/useAccounts';
 import { userData } from '../util/myData';
 
@@ -16,13 +16,27 @@ export const NFTSection = styled(({ className }) => {
 
     return (
         <div className={className}>
-            {loading ? <p>Loading...</p> : error ? <p>{error}</p> : (
+            {loading ? <p>Fetching NFTs...</p> : error ? <p>{error}</p> : (
                 data.map((nft : NFTItem) => 
-                    <NFTPreview key={nft.id} nftData={nft} />
+                    nft.metadata ? (
+                        <div className="item">
+                            <NFTCard key={nft.id} nftData={nft} />
+                        </div>
+                    ) : ( null )
                 )
             )}
         </div>
     )
 })`
-
+    margin: 4em;
+    display: flex;
+    flex-direction: row
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    // width: 90%;    
+    flex-flow: wrap;
+    item {
+        align-self: auto
+    }
 `
