@@ -19,4 +19,10 @@ function App() {
   );
 }
 
+// Created by Joshua Ahimaz @ 2022 | Sunway Tech Club x Web3 Series
+//
+// https://joshuaahimaz.com/
+// https://github.com/JAhimaz
+// https://www.linkedin.com/in/joshuaahimaz/
+
 export default App;

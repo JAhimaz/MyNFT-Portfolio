@@ -17,3 +17,9 @@ https://mynft-website-test.web.app/
 4. Run `npm start` to start the local hosting server and view your current site in a browser
 5. Head over to `src/util/myData.ts` and change the data within the object to your own information.
 6. Save and Reload the page to see your changes.
+
+Created by Joshua Ahimaz @ 2022 | Sunway Tech Club x Web3 Series
+
+https://joshuaahimaz.com/
+https://github.com/JAhimaz
+https://www.linkedin.com/in/joshuaahimaz/
