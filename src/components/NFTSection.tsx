@@ -14,10 +14,12 @@ export const NFTSection = styled(({ className }) => {
 
     const { loading, data, error } = useAccounts(userData['kusama-address']);
 
+    console.log(data)
+
     return (
         <div className={className}>
             {loading ? <h3>Fetching NFTs...</h3> : error ? <p>{error}</p> : (
-                data ? (
+                data.length > 0 ? (
                     data.map((nft : NFTItem) => 
                     nft.metadata ? (
                         <div className="item">
