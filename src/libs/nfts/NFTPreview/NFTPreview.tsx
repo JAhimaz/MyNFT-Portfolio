@@ -12,7 +12,7 @@ const MediaPreview = ({contentCategory, url} : TProps) => {
 
     switch(contentCategory) {
         case 'image':
-            return <img src={url} alt="Image" style={{"width":"100%", "height": "100%", "objectFit" : "cover", "objectPosition" : "center"}}/>
+            return <img src={url} alt="Image" style={{"width":"100%", "height": "100%", "objectFit" : "cover", "objectPosition" : "center", "borderRadius" : "10px"}}/>
         case 'video':
             return <video 
             muted
@@ -26,7 +26,7 @@ const MediaPreview = ({contentCategory, url} : TProps) => {
                 target.pause()
                 target.currentTime = 0
             }}
-            src={url} style={{"width":"100%", "height": "100%", "objectFit" : "cover", "objectPosition" : "center"}}/>
+            src={url} style={{"width":"100%", "height": "100%", "objectFit" : "cover", "objectPosition" : "center", "borderRadius" : "10px"}}/>
         case 'application':
             return <div style={{"margin" : "1em"}}>Unsupported Type: PDF</div>
         case 'model':
@@ -39,7 +39,7 @@ const MediaPreview = ({contentCategory, url} : TProps) => {
                 'ar-status': 'not-presenting',
                 'rotation-per-second': '20deg',
             }
-            return <model-viewer {...modelProps} style={{"width":"100%", "height": "100%", "objectFit" : "cover", "objectPosition" : "center"}}/>
+            return <model-viewer {...modelProps} style={{"width":"100%", "height": "100%", "objectFit" : "cover", "objectPosition" : "center", "borderRadius" : "10px"}}/>
         case 'audio':
                 if (!url) {
                   return null
@@ -49,7 +49,7 @@ const MediaPreview = ({contentCategory, url} : TProps) => {
                     <div style={{"margin" : "1em"}}>🎵🎶 Audio 🎵🎶</div>
                     <audio
                       controls
-                      style={{"width":"100%", "height": "82%", "objectFit" : "cover", "objectPosition" : "center"}}
+                      style={{"width":"100%", "height": "82%", "objectFit" : "cover", "objectPosition" : "center", "borderRadius" : "10px"}}
                     >
                       <source src={url} />
                     </audio>
@@ -70,5 +70,6 @@ export const NFTPreview = styled(({ className, mediaUri, contentCategory }) => {
     width: 300px;
     height: 300px;
     background: -webkit-linear-gradient(#282759, #4B2877);
+    border-radius: 10px;
     cursor: pointer;
 `
