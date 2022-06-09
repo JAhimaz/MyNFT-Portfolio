@@ -1,7 +1,7 @@
 export const userData = {
-    "kusama-address" : "",
-    "extra-link" : "",
-    "extra-link-text" : "Extra Link",
-    "my-name" : "Your Name",
-    "my-social" : "",
+    "kusama-address" : "DmZvhEFwbhaxQCguYwKTxZrXLpLT16jjtDWMh2zVhxnwFzp",
+    "extra-link" : "https://joshuaahimaz.com/",
+    "extra-link-text" : "Home",
+    "my-name" : "Joshua Ahimaz",
+    "my-social" : "https://www.linkedin.com/in/joshuaahimaz/",
 }
