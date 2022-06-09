@@ -40,6 +40,21 @@ const MediaPreview = ({contentCategory, url} : TProps) => {
                 'rotation-per-second': '20deg',
             }
             return <model-viewer {...modelProps} style={{"width":"100%", "height": "100%", "objectFit" : "cover", "objectPosition" : "center"}}/>
+        case 'audio':
+                if (!url) {
+                  return null
+                }
+                return (
+                  <>
+                    <div>🎵🎶 Audio 🎵🎶</div>
+                    <audio
+                      controls
+                      style={{"width":"100%", "height": "93%", "objectFit" : "cover", "objectPosition" : "center"}}
+                    >
+                      <source src={url} />
+                    </audio>
+                  </>
+        )
         default:
             return <div>Unknown media type</div>
     }

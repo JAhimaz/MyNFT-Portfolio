@@ -16,14 +16,17 @@ export const NFTSection = styled(({ className }) => {
 
     return (
         <div className={className}>
-            {loading ? <p>Fetching NFTs...</p> : error ? <p>{error}</p> : (
-                data.map((nft : NFTItem) => 
+            {loading ? <h3>Fetching NFTs...</h3> : error ? <p>{error}</p> : (
+                data ? (
+                    data.map((nft : NFTItem) => 
                     nft.metadata ? (
                         <div className="item">
                             <NFTCard key={nft.id} nftData={nft} />
                         </div>
-                    ) : ( null )
-                )
+                        ) : ( null )
+                    )
+                ) : ( <h1>😔 No NFTs found</h1>)
+            
             )}
         </div>
     )

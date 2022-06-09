@@ -8,11 +8,21 @@ export const useAccounts = (accountUrl : string) => {
     const cacheURL = Fetch.accountFetcherUrl(accountUrl);
     const { data, error } = useSWR(cacheURL, Fetch.fetcher);
 
+    console.log(error)
+
     if(data){
         return {
             loading: false,
             data: extractData(data),
             error
+        }
+    }
+
+    if(error){
+        return {
+            loading: false,
+            data,
+            // error
         }
     }
 
