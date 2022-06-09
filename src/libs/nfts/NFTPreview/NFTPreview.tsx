@@ -28,7 +28,7 @@ const MediaPreview = ({contentCategory, url} : TProps) => {
             }}
             src={url} style={{"width":"100%", "height": "100%", "objectFit" : "cover", "objectPosition" : "center"}}/>
         case 'application':
-            return <div>Unsupported Type</div>
+            return <div style={{"margin" : "1em"}}>Unsupported Type: PDF</div>
         case 'model':
             const modelProps = {
                 'src': url,
@@ -46,10 +46,10 @@ const MediaPreview = ({contentCategory, url} : TProps) => {
                 }
                 return (
                   <>
-                    <div>🎵🎶 Audio 🎵🎶</div>
+                    <div style={{"margin" : "1em"}}>🎵🎶 Audio 🎵🎶</div>
                     <audio
                       controls
-                      style={{"width":"100%", "height": "93%", "objectFit" : "cover", "objectPosition" : "center"}}
+                      style={{"width":"100%", "height": "82%", "objectFit" : "cover", "objectPosition" : "center"}}
                     >
                       <source src={url} />
                     </audio>

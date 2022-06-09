@@ -1,5 +1,6 @@
 import React from 'react';
 import { About } from './components/About';
+import { Navigation } from './components/Navigation';
 import { NFTSection } from './components/NFTSection';
 import { LanguageProvider } from './containers/Language';
 import './css/App.css';
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <LanguageProvider>
         <header className="App-header">
+          <Navigation />
           <About />
           <NFTSection />
         </header>
