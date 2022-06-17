@@ -20,6 +20,21 @@ https://mynft-website-test.web.app/
 5. Head over to `src/util/myData.ts` and change the data within the object to your own information.
 6. Save and Reload the page to see your changes.
 
+# Uploading to Firebase
+1. Head over to https://console.firebase.google.com/ and create a new project.
+2. Firebase-tools is already included within the dependencies. Hence, skip to step 3.
+3. run the command `firebase login` and login with your gmail account that has the created project
+4. run the command `npm run build` to build the project.
+5. run the command `firebase init` to initialise firebase on the project.
+5.1. Using the spacebar, select `Hosting: Configure and deploy Firebase Hosting sites.` (or similar)
+5.2. Select your project which you had created on Firebase Console.
+5.3. Type `build`
+5.4. For Configure as a single-page app question enter `y` for this option.
+5.5. For Overwrite your existing build/index.htmlfile. So You'll want to enter `N` (No)
+6. Upon completing all questions type thte command `firebase deploy`
+7. Just like that your new site will be live. The link to your site will be provided in the console.
+
+
 Created by Joshua Ahimaz @ 2022 | Sunway Tech Club x Web3 Series
 
 https://joshuaahimaz.com/  
