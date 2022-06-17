@@ -20,7 +20,7 @@ https://mynft-website-test.web.app/
 5. Head over to `src/util/myData.ts` and change the data within the object to your own information.
 6. Save and Reload the page to see your changes.
 
-# Uploading to Firebase
+## Uploading to Firebase
 1. Head over to https://console.firebase.google.com/ and create a new project.
 2. Firebase-tools is already included within the dependencies. Hence, skip to step 3.
 3. run the command `firebase login` and login with your gmail account that has the created project
